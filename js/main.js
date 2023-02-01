@@ -21,10 +21,11 @@ function generateGrid(grid, dimension) {
 
         // Inserisco il <div> appena creato nella griglia
         grid.append(squareGrid);
+
+        squareGrid.addEventListener('click', function () {
+            this.classList.toggle('active');
+        })
     }
 
-    squareGrid.addEventListener('click', function () {
-        this.classList.toggle('active');
-    })
 
 }
