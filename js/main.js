@@ -4,7 +4,15 @@ const gridElement = document.getElementById('grid');
 // Inizializzo una variabile con la dimensione della griglia
 const gridDimension = 100;
 
+// Invoco la funzione
 generateGrid(gridElement, gridDimension);
+
+/**
+ * Function that generates a dynamic grid with given HTMLElement and dimension
+ * 
+ * @param {HTMLElement} grid 
+ * @param {number} dimension 
+ */
 
 // Creo una funzione per generare una griglia
 function generateGrid(grid, dimension) {
@@ -22,6 +30,7 @@ function generateGrid(grid, dimension) {
         // Inserisco il <div> appena creato nella griglia
         grid.append(squareGrid);
 
+        // Creo un event listener quando si clicca su un quadrato
         squareGrid.addEventListener('click', function () {
             this.classList.toggle('active');
 
@@ -30,6 +39,5 @@ function generateGrid(grid, dimension) {
             console.log(squareNumber + ' cell clicked');
         })
     }
-
 
 }
