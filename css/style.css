@@ -14,6 +14,22 @@ header .logo {
     height: 60px;
 }
 
+/* Right Header */
+
+#difficulty_level {
+    text-align: left;
+    height: 2.5rem;
+}
+
+#button_play {
+    height: 2.5rem;
+}
+
+#error_text {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+}
+
 /* Grid */
 
 main {
@@ -53,9 +69,4 @@ main {
 .square.active {
     background-color: white;
     color: #111;
-}
-
-#error_text {
-    background-color: rgba(255, 0, 0, 0.5);
-    color: white;
 }
