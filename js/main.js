@@ -24,6 +24,10 @@ function generateGrid(grid, dimension) {
 
         squareGrid.addEventListener('click', function () {
             this.classList.toggle('active');
+
+            // Stampo un log con il numero della cella cliccata
+            const squareNumber = this.innerHTML;
+            console.log(squareNumber + ' cell clicked');
         })
     }
 
