@@ -1,25 +1,50 @@
 body {
     background-color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
-#grid {
+/* Header */
+
+header {
     display: flex;
-    flex-wrap: wrap;
+    background-color: white;
+}
+
+header .logo {
+    height: 60px;
+}
+
+/* Grid */
+
+main {
+    height: calc(100vh - 80px);
+}
+
+#grid {
     width: 800px;
-    height: 80%;
+    height: 90%;
     border: 1px solid white;
+}
+
+.square.easy {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.square.normal {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.square.hard {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 .square {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 1px solid white;
     color: white;
     cursor: pointer;
