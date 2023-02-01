@@ -1,14 +1,13 @@
-
 // Prendo il bottone dall'HTML
 const buttonPlay = document.getElementById('button_play');
+
+// Prendo il messaggio di errore per quando non verrà inserito un livello
+const errorText = document.getElementById('error_text');
 
 // Prendo la #grid nell'HTML
 const gridElement = document.getElementById('grid');
 
 buttonPlay.addEventListener('click', function () {
-
-    // Resetto la griglia
-    gridElement.innerHTML = '';
 
     // Prendo il valore della difficoltà
     const getDifficultyLevel = document.getElementById('difficulty_level').value;
@@ -19,28 +18,32 @@ buttonPlay.addEventListener('click', function () {
 
     // Difficoltà facile
     if (getDifficultyLevel == 'easy') {
+        // Resetto la griglia
+        gridElement.innerHTML = '';
         gridDimension = 100;
         squareClass = 'easy';
     }
 
     // Difficoltà normale
     else if (getDifficultyLevel == 'normal') {
+        // Resetto la griglia
+        gridElement.innerHTML = '';
         gridDimension = 81;
         squareClass = 'normal';
     }
 
     // Difficoltà difficile
     else if (getDifficultyLevel == 'hard') {
+        // Resetto la griglia
+        gridElement.innerHTML = '';
         gridDimension = 49;
         squareClass = 'hard';
     }
 
     // Difficoltà non selezionata
     else {
-
+        errorText.innerHTML = 'Error. Please select a level';
     }
-
-    console.log(getDifficultyLevel);
 
     // Invoco la funzione
     generateGrid(gridElement, gridDimension);

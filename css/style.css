@@ -54,3 +54,8 @@ main {
     background-color: white;
     color: #111;
 }
+
+#error_text {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+}
