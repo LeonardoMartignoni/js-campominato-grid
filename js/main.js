@@ -9,19 +9,22 @@ generateGrid(gridElement, gridDimension);
 // Creo una funzione per generare una griglia
 function generateGrid(grid, dimension) {
 
+    let squareGrid;
+
     // Creo un ciclo che si ripete per la dimensione della griglia, così da metterci gli square
     for (let i = 0; i < dimension; i++) {
 
         // Creo un <div> con classe .square
-        const createDiv = document.createElement('div');
-        createDiv.classList.add('square');
-        createDiv.innerHTML = i + 1;
+        squareGrid = document.createElement('div');
+        squareGrid.classList.add('square');
+        squareGrid.innerHTML = i + 1;
 
         // Inserisco il <div> appena creato nella griglia
-        grid.append(createDiv);
+        grid.append(squareGrid);
     }
 
-}
+    squareGrid.addEventListener('click', function () {
+        this.classList.toggle('active');
+    })
 
-// Aggiungo a <div> la classe .square
-// Posiziono il div.square dentro #grid
+}

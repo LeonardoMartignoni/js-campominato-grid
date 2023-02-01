@@ -22,4 +22,10 @@ body {
     height: calc(100% / 10);
     border: 1px solid white;
     color: white;
+    cursor: pointer;
+}
+
+.square.active {
+    background-color: white;
+    color: #111;
 }
